@@ -11,6 +11,9 @@
                  success: function(data) {
                      if (data == false) {
                          alert('Check your information')
+                     } else {
+                         window.location.reload();
+
                      }
                  }
              });
@@ -23,6 +26,7 @@
                  type: 'POST',
                  url: '/contact/deleteContact/' + id
              });
+             window.location.reload();
          });
 
 
@@ -38,16 +42,12 @@
                  success: function(data) {
                      if (data == false) {
                          alert('Check your information')
+                     } else {
+                         window.location.reload();
+
                      }
                  }
 
              });
          });
-
-     $(document).ajaxStop(function() {
-         window.location.reload();
-     });
-
-
-
  });
